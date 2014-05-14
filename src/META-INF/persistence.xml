@@ -10,15 +10,16 @@
   <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
   <!-- entidade mapeada -->
-  <class>br.edu.ifms.formula1.model.Categoria</class>
-  <class>br.edu.ifms.formula1.model.Instituicao</class>
-  <class>br.edu.ifms.formula1.model.Tarefa</class>
-  <class>br.edu.ifms.formula1.model.Usuario</class>
+  <class>br.edu.ifms.agenda.model.Aluno</class>
+  <class>br.edu.ifms.agenda.model.Categoria</class>
+  <class>br.edu.ifms.agenda.model.Instituicao</class>
+  <class>br.edu.ifms.agenda.model.Professor</class>
+  <class>br.edu.ifms.agenda.model.Tarefa</class>  
 
   <properties>
 	<!-- dados da conexao -->
 	<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-	<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/formula1" />	
+	<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/agenda" />	
 	<property name="javax.persistence.jdbc.user" value="root" />
 	<property name="javax.persistence.jdbc.password" value="root" />
 

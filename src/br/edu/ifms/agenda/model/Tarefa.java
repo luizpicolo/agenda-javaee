@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -13,74 +16,88 @@ import javax.persistence.TemporalType;
 public class Tarefa {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
-	private String descricao;	
+	private String descricao;
+	private int visibilidade;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Calendar dataInicio;
 	
 	@Temporal(TemporalType.TIMESTAMP)
-	private Calendar dataTermino;	
+	private Calendar dataTermino;
 	
-	private int visibilidade;
-	private Categoria categoria;	
-	private Usuario usuario;
+	@OneToMany
+	private Categoria categoria;
+	
+	@ManyToOne
+	private Professor professor;
+	
+	@ManyToMany
+	private Aluno aluno;
 	
 	
 	/* Getters e Setters */
-	
+
 	public long getId() {
 		return id;
 	}
-	
+
 	public void setId(long id) {
 		this.id = id;
 	}
-	
+
 	public String getDescricao() {
 		return descricao;
 	}
-	
+
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	
-	public Calendar getDataInicio() {
-		return dataInicio;
-	}
-	
-	public void setDataInicio(Calendar dataInicio) {
-		this.dataInicio = dataInicio;
-	}
-	
-	public Calendar getDataTermino() {
-		return dataTermino;
-	}
-	
-	public void setDataTermino(Calendar dataTermino) {
-		this.dataTermino = dataTermino;
-	}
-	
+
 	public int getVisibilidade() {
 		return visibilidade;
 	}
-	
+
 	public void setVisibilidade(int visibilidade) {
 		this.visibilidade = visibilidade;
 	}
-	
+
+	public Calendar getDataInicio() {
+		return dataInicio;
+	}
+
+	public void setDataInicio(Calendar dataInicio) {
+		this.dataInicio = dataInicio;
+	}
+
+	public Calendar getDataTermino() {
+		return dataTermino;
+	}
+
+	public void setDataTermino(Calendar dataTermino) {
+		this.dataTermino = dataTermino;
+	}
+
 	public Categoria getCategoria() {
 		return categoria;
 	}
-	
+
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
-	
-	public Usuario getUsuario() {
-		return usuario;
+
+	public Professor getProfessor() {
+		return professor;
 	}
-	
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+
+	public void setProfessor(Professor professor) {
+		this.professor = professor;
+	}
+
+	public Aluno getAluno() {
+		return aluno;
+	}
+
+	public void setAluno(Aluno aluno) {
+		this.aluno = aluno;
 	}
 }
