@@ -27,10 +27,6 @@ public abstract class Usuario {
 	@Column(nullable = false)
 	private String email;
 	
-	private String avatar;
-	
-	private String descricao;
-	
 	@Column(nullable = false)
 	private String usuario;
 	
@@ -46,6 +42,8 @@ public abstract class Usuario {
 	@ManyToOne
 	private Instituicao instituicao;
 	
+	private String avatar;
+	private String descricao;
 	
 	/* Getters e Setters */
 

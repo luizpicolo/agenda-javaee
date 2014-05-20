@@ -13,13 +13,17 @@ import javax.persistence.OneToMany;
 public class Instituicao {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id; 
+	
 	@Column(nullable = false)
 	private String nome;
+	
 	@Column(nullable = false)
 	private String cnpj;
-	private String localidade;
+	
 	@Column(nullable = false)
 	private String email;
+	
+	private String localidade;
 	private String endereco;
 	private String telefone;
 	private String logomarca;
