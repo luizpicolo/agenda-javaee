@@ -16,6 +16,9 @@ public class Teste {
 		Instituicao instituicao = new Instituicao();
 
 		instituicao.setNome("IFMS");
+		instituicao.setCnpj("0000000000000");
+		instituicao.setEmail("ifms@ifms.edu.br");
+		
 
 		em.getTransaction().begin();
 		em.persist(instituicao);
