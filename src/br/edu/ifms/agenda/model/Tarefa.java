@@ -35,7 +35,6 @@ public class Tarefa {
 	@ManyToMany
 	private List<Aluno> alunos;
 	
-	
 	/* Getters e Setters */
 
 	public long getId() {
@@ -109,5 +108,4 @@ public class Tarefa {
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-
 }

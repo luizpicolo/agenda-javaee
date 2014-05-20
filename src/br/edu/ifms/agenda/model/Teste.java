@@ -1,6 +1,5 @@
 package br.edu.ifms.agenda.model;
 
-import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 import javax.persistence.EntityManager;
