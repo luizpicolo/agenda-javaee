@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -17,6 +16,7 @@ import javax.persistence.TemporalType;
 public class Tarefa {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
+	private String titulo;
 	private String descricao;
 	private int visibilidade;
 	
@@ -100,6 +100,14 @@ public class Tarefa {
 
 	public void setAlunos(List<Aluno> alunos) {
 		this.alunos = alunos;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 
 }
