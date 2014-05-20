@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
@@ -29,9 +28,6 @@ public abstract class Usuario {
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Calendar dataCadastro;
-	
-	@ManyToMany(mappedBy="usuario")
-	private List<Tarefa> tarefas;
 	
 	@OneToMany(mappedBy="usuario")
 	private List<Categoria> categorias;
@@ -104,14 +100,6 @@ public abstract class Usuario {
 
 	public void setDataCadastro(Calendar dataCadastro) {
 		this.dataCadastro = dataCadastro;
-	}
-
-	public List<Tarefa> getTarefas() {
-		return tarefas;
-	}
-
-	public void setTarefas(List<Tarefa> tarefas) {
-		this.tarefas = tarefas;
 	}
 
 	public List<Categoria> getCategorias() {

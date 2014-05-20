@@ -7,7 +7,8 @@ import javax.persistence.ManyToMany;
 
 @Entity
 public class Aluno extends Usuario {
-	@ManyToMany(mappedBy="aluno")
+	
+	@ManyToMany(mappedBy="alunos")
 	private List<Tarefa> tarefas;
 
 	

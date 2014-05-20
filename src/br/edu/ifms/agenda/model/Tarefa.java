@@ -1,6 +1,7 @@
 package br.edu.ifms.agenda.model;
 
 import java.util.Calendar;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -16,6 +16,7 @@ import javax.persistence.TemporalType;
 public class Tarefa {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
+	private String titulo;
 	private String descricao;
 	private int visibilidade;
 	
@@ -25,15 +26,14 @@ public class Tarefa {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Calendar dataTermino;
 	
-	@OneToMany
+	@ManyToOne
 	private Categoria categoria;
 	
 	@ManyToOne
 	private Professor professor;
 	
 	@ManyToMany
-	private Aluno aluno;
-	
+	private List<Aluno> alunos;
 	
 	/* Getters e Setters */
 
@@ -93,11 +93,19 @@ public class Tarefa {
 		this.professor = professor;
 	}
 
-	public Aluno getAluno() {
-		return aluno;
+	public List<Aluno> getAlunos() {
+		return alunos;
 	}
 
-	public void setAluno(Aluno aluno) {
-		this.aluno = aluno;
+	public void setAlunos(List<Aluno> alunos) {
+		this.alunos = alunos;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 }
