@@ -3,6 +3,7 @@ package br.edu.ifms.agenda.model;
 import java.util.Calendar;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,9 +17,14 @@ import javax.persistence.TemporalType;
 public class Tarefa {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
+	
+	@Column(nullable = false)
 	private String titulo;
+	
 	private String descricao;
-	private int visibilidade;
+	
+	@Column(nullable = false)
+	private int visibilidade = 1;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Calendar dataInicio;

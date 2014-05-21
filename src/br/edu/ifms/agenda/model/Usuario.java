@@ -3,6 +3,7 @@ package br.edu.ifms.agenda.model;
 import java.util.Calendar;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,11 +20,17 @@ import javax.persistence.TemporalType;
 public abstract class Usuario {
 	@Id @GeneratedValue(strategy=GenerationType.TABLE)
 	private long id;
+	
+	@Column(nullable = false)
 	private String nome;
+	
+	@Column(nullable = false)
 	private String email;
-	private String avatar;
-	private String descricao;
+	
+	@Column(nullable = false)
 	private String usuario;
+	
+	@Column(nullable = false)
 	private String senha;
 	
 	@Temporal(TemporalType.TIMESTAMP)
@@ -35,6 +42,8 @@ public abstract class Usuario {
 	@ManyToOne
 	private Instituicao instituicao;
 	
+	private String avatar;
+	private String descricao;
 	
 	/* Getters e Setters */
 
