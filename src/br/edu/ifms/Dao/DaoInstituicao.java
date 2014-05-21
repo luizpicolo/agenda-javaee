@@ -15,7 +15,7 @@ public class DaoInstituicao {
 
 	public Instituicao salvar(Instituicao instituicao){
 		this.em.getTransaction().begin();
-		this.em.persist(instituicao);
+		this.em.merge(instituicao);
 		this.em.getTransaction().commit();
 		
 		return instituicao;
