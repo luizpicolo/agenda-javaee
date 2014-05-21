@@ -6,7 +6,7 @@ Projeto para as aulas de Linguagem de Programação III e Introdução a Framewo
 
 ### Linguagem
 
-- JavaEE
+- Java
 
 ### Equipe
 
