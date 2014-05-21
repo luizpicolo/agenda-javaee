@@ -17,7 +17,6 @@ public class DaoInstituicao {
 		this.em.getTransaction().begin();
 		this.em.merge(instituicao);
 		this.em.getTransaction().commit();
-		
 		return instituicao;
 	}
 }
