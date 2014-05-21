@@ -1,6 +1,8 @@
 # Agenda Universitária
 
-Projeto (em desenvolvimento) para as aulas de Linguagem de Programação III e Introdução a Frameworks.
+**Projeto em Desenvolvimento -> 10%**
+
+Projeto para as aulas de Linguagem de Programação III e Introdução a Frameworks.
 
 ### Linguagem
 
