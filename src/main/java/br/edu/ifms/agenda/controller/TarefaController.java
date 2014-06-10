@@ -10,6 +10,13 @@ import br.com.caelum.vraptor.Result;
 public class TarefaController {
 	private final Result result; 
 	
+	/** 
+	* @deprecated CDI eyes only 
+	*/  
+	public TarefaController() {  
+	    this(null);  
+	} 
+	
 	@Inject
 	public TarefaController(Result result) {
 		this.result = result;

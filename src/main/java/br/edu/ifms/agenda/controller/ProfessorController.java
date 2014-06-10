@@ -7,9 +7,15 @@ import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
 
 @Controller
-public class ProfessorController {
-	
+public class ProfessorController {	
 	private final Result result; 
+	
+	/** 
+	* @deprecated CDI eyes only 
+	*/  
+	public ProfessorController() {  
+	    this(null);  
+	} 
 	
 	@Inject
 	public ProfessorController(Result result) {

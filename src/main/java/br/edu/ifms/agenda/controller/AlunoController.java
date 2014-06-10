@@ -8,7 +8,14 @@ import br.com.caelum.vraptor.Result;
 
 @Controller
 public class AlunoController {
-	private final Result result; 
+	private final Result result;
+	
+	/** 
+	* @deprecated CDI eyes only 
+	*/  
+	public AlunoController() {  
+	    this(null);  
+	} 
 	
 	@Inject
 	public AlunoController(Result result) {

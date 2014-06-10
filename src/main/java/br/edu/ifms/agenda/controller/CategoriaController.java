@@ -8,7 +8,14 @@ import br.com.caelum.vraptor.Result;
 
 @Controller
 public class CategoriaController {
-	private final Result result; 
+	private final Result result;
+	
+	/** 
+	* @deprecated CDI eyes only 
+	*/  
+	public CategoriaController() {  
+	    this(null);  
+	} 
 	
 	@Inject
 	public CategoriaController(Result result) {
