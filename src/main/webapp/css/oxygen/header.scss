@@ -1,0 +1,81 @@
+/*
+	Header (cabeçalho)
+*/
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+
+	width: 200px;
+	height: 100%;
+
+	background-color: $cor-3;
+
+	@include box-sizing(border-box);
+}
+
+#header-logo {
+	cursor: default;
+
+	line-height: 60px;
+
+	color: $cor-2;
+	font-size: 2em;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	
+	background-color: $cor-3;
+
+	a {
+		color: $cor-2;
+		text-decoration: none;
+	}
+}
+
+#nav {
+	li {
+		position: relative;
+	}
+	
+	h1,
+	h2 {
+		cursor: default;
+
+		line-height: 40px;
+
+		color: rgba($cor-2,.9);
+		font-size: 1.4em;
+		font-weight: 400;
+
+		padding: 0 20px;
+		
+		background-color: $cor-4;
+
+		@include box-sizing(border-box);
+	}
+
+	a {
+		display: block;		
+		line-height: 50px;
+
+		color: $cor-2;
+		font-size: 1.4em;
+		text-decoration: none;
+
+		padding: 0 20px;
+
+		@include box-sizing(border-box);
+		@include transition(background-color .15s ease);
+
+		&:hover {
+			background-color: $cor-4;
+		}
+	}
+}
+
+#icon-nav {
+	display: none;
+}

@@ -1,0 +1,30 @@
+/*
+	Tables
+*/
+
+table {
+	width: 100%;
+	font-size: 1.4em;
+}
+
+thead {
+	tr {
+		background: #eee;
+	}
+}
+
+th,
+td {
+	max-width: 300px;
+	vertical-align: top;
+	padding: 10px;
+	border: solid 1px #ccc;
+}
+
+.table-autoclave {
+	tr {
+		&:nth-child(even){
+			background: #eee;
+		}
+	}
+}

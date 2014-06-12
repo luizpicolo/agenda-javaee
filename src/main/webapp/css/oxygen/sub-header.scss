@@ -1,0 +1,85 @@
+/*
+	Sub-header (sub cabeçalhos)
+*/
+
+#sub-header {
+	position: relative;
+	z-index: 50;
+
+	height: 60px;
+
+	text-align: right;
+
+	padding: 10px;
+
+	background-color: $cor-1;
+
+	@extend .clearfix;
+	@include box-sizing(border-box);
+}
+
+#user {
+	cursor: default;
+	position: relative;
+
+	display: inline-block;
+	height: 40px;
+
+	color: $cor-4;
+
+	padding: 0 5px;
+	
+	@include border-radius(20px);
+	background-color: $cor-2;
+}
+
+#user-name {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+
+	font-size: 1.4em;
+	font-weight: 600;
+
+	margin: 0 10px 0 15px;
+}
+
+#user-avatar {
+	float: left;
+	
+	width: 30px;
+	height: 30px;
+
+	margin: 5px;
+
+	@include border-radius(100%);
+	background: url('../img/avatar-default.jpg') no-repeat;
+	overflow: hidden;
+}
+
+#user-nav {
+	float: left;
+	
+	display: block;
+	height: 40px;
+
+	list-style: none;
+	padding: 0;
+	margin: 0 12px 0 5px;
+
+	li {
+		display: inline-block;
+		margin: 0 5px;
+	}
+
+	a {
+		display: block;
+		line-height: 40px;
+
+		color: $cor-4;
+		font-size: 1.2em;
+		text-align: left;
+		text-decoration: none;
+	}
+}
+

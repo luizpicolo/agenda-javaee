@@ -1,30 +1,40 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
+<header id="header">
+  <h1 id="header-logo"><a href="#">Oxygen</a></h1>
 
-<!-- Menu toggle -->
-<a href="#menu" id="menuLink" class="menu-link"> <!-- Hamburger icon -->
-	<span></span>
-</a>
+  <a id="icon-nav" href="#"><i class="fa fa-bars"></i></a>
 
-<nav id="menu">
-	<div class="pure-menu pure-menu-open">
-		<a class="pure-menu-heading" href="#">MENU</a>
+  <nav id="nav">
+    <h2>Aluno</h2>
+    <ul>
+      <li><a href="#">Cadastrar</a></li>
+      <li><a href="#">Listar</a></li>
+    </ul>
 
-		<ul>
-			<li><a href="#">Item 1</a></li>
-			<li><a href="#">Item 2</a></li>
-			<li><a href="#">Item 3</a></li>
-			
-			<li class="menu-item-divided pure-menu-selected"><a href="#">CATEGORIA A</a>
-			</li>
+    <h2>Categoria</h2>
+    <ul>
+      <li><a href="#">Cadastrar</a></li>
+      <li><a href="#">Listar</a></li>
+    </ul>
 
-			<li><a href="#">Item 4</a></li>
-			
-			<li class="menu-item-divided pure-menu-selected"><a href="#">CONFIGURAÇÕES</a>
-			
-			<li><a href="#">Conta</a></li>
-			<li><a href="#">Sair</a></li>
-		</ul>
-	</div>
-</nav>
+    <h2>Instituição</h2>
+    <ul>
+      <li><a href="#">Cadastrar</a></li>
+      <li><a href="#">Listar</a></li>
+    </ul>
+
+    <h2>Professor</h2>
+    <ul>
+      <li><a href="#">Cadastrar</a></li>
+      <li><a href="#">Listar</a></li>
+    </ul>
+
+    <h2>Tarefa</h2>
+    <ul>
+      <li><a href="#">Cadastrar</a></li>
+      <li><a href="#">Listar</a></li>
+    </ul>
+  </nav>
+</header>

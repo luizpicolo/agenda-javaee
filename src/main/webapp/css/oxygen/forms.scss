@@ -1,0 +1,88 @@
+/*
+	Forms
+*/
+
+form {
+	label,
+	span {
+		display: block;
+		font-size: 1.4em;
+		margin-bottom: 10px;
+		line-height: 22px;
+	}
+
+	input,
+	textarea,
+	select {
+		@include box-sizing(border-box);
+
+		outline: none;
+
+		display: block;
+		width: 100%;
+		height: 40px;
+
+		font-size: 1.4em;
+
+		padding: 10px;
+		
+		border: solid 1px #bbb;
+		background: none;
+
+		@include border-radius(3px);
+	}
+	
+	select,
+	textarea,
+	input:not([type="range"]):not([type="radio"]):not([type="checkbox"]){
+		&:hover {
+			@include box-shadow(inset 5px 0 0px -2px #bbb);
+		}
+
+		&:focus {
+			@include box-shadow(inset 5px 0 0px -2px #bbb);
+
+			&:invalid {
+				border-color: $cor-3;
+				@include box-shadow(inset 5px 0 0px -2px $cor-3);
+			}
+		}
+	}
+
+	input[type="search"]{
+		@include box-sizing(border-box);
+	}
+
+	input[type="range"]{
+		padding: 10px 0;
+		border: 0;
+	}
+
+	input[type="password"]{
+		font-family: sans-serif;
+	}
+
+	textarea {
+		min-height: 80px;
+	}
+}
+
+.radio {
+	position: relative;
+
+	input {
+		cursor: pointer;
+
+		position: absolute;
+		top: 5px;
+		left: 0;
+
+		width: auto;
+		height: auto;
+	}
+
+	label {
+		cursor: pointer;
+		padding-left: 10px;
+	}
+}
