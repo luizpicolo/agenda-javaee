@@ -1,0 +1,10 @@
+/*
+	Boxs (caixas)
+*/
+
+.box {
+	cursor: default;
+	padding: 20px;
+	background-color: $cor-1;
+	@include box-sizing(border-box);
+}

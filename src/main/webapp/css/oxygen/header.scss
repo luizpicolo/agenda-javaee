@@ -1,0 +1,142 @@
+/*
+	Header (cabeçalho)
+*/
+
+#header {
+	@include box-sizing(border-box);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+
+	width: 200px;
+	height: 100%;
+
+	background-color: $cor-3;
+	
+	@include transition(.2s ease);
+
+	@media (max-width: 1200px) {
+    width: 0;
+    overflow: hidden;
+
+    #header-logo,
+    #nav {
+			opacity: 0;
+    }
+  }
+}
+
+.header-active {
+	width: 200px !important;
+	display: block !important;
+
+	#header-logo,
+	#nav {
+		opacity: 1 !important;
+	}
+}
+
+#header-nav {
+	cursor: pointer;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+
+	display: none;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	
+	color: $cor-1;
+	font-size: 2.4em;
+	text-align: center;
+
+	background-color: $cor-3;
+
+	@include transition(left .2s ease);
+
+	@media (max-width: 1200px) {
+    display: block;
+  }
+
+	i {
+		@include transition(.2s ease);
+	}
+}
+
+.header-nav-active {
+	left: 200px !important;
+
+	i {
+		@include transform(rotate(180deg));
+	}
+}
+
+#header-logo {
+	cursor: default;
+
+	line-height: 60px;
+
+	color: $cor-2;
+	font-size: 2em;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	
+	background-color: $cor-3;
+
+	@include transition(.2s .2s ease);
+
+	a {
+		color: $cor-2;
+		text-decoration: none;
+	}
+}
+
+#nav {
+	@include transition(.2s .2s ease);
+
+	li {
+		position: relative;
+	}
+	
+	h1,
+	h2 {
+		@include box-sizing(border-box);
+
+		cursor: default;
+
+		line-height: 40px;
+
+		color: rgba($cor-2,.9);
+		font-size: 1.4em;
+		font-weight: 400;
+
+		padding: 0 20px;
+		
+		background-color: $cor-4;
+	}
+
+	a {
+		@include box-sizing(border-box);
+
+		display: block;		
+		line-height: 50px;
+
+		color: $cor-2;
+		font-size: 1.4em;
+		text-decoration: none;
+
+		padding: 0 20px;
+
+		@include transition(background-color .15s ease);
+
+		&:hover {
+			background-color: $cor-4;
+		}
+	}
+}
