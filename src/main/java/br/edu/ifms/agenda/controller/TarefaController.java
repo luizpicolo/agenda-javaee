@@ -23,7 +23,12 @@ public class TarefaController {
 	}
 
 	@Path("/tarefa")
-	public void tarefa() {
-		result.include("welcome", "Seja bem vindo, meu jovem!");
+	public void index() {
+		
+	}
+	
+	@Path("/tarefa/cadastrar")
+	public void cadastrar() {
+		
 	}
 }

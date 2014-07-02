@@ -23,7 +23,12 @@ public class AlunoController {
 	}
 
 	@Path("/aluno")
-	public void aluno() {
-		result.include("welcome", "Seja bem vindo, meu jovem!");
+	public void index() {
+		
+	}
+	
+	@Path("/aluno/cadastrar")
+	public void cadastrar() {
+		
 	}
 }

@@ -23,7 +23,12 @@ public class CategoriaController {
 	}
 
 	@Path("/categoria")
-	public void categoria() {
-		result.include("welcome", "Seja bem vindo, meu jovem!");
+	public void index() {
+		
+	}
+	
+	@Path("/categoria/cadastrar")
+	public void cadastrar() {
+		
 	}
 }

@@ -31,38 +31,38 @@
         </div>
 
         <div class="row">
-          <form>
+          <form method="post" action="/instituicao">
           	<div class="row margin-bottom">
 	          	<div class="col-6 col-left padding-right">
 	          		<label for="nome">Nome</label>
-	          		<input type="text" name="nome" id="nome" required>
+	          		<input type="text" name="instituicao.nome" id="nome" required>
 	          	</div>
 
 	          	<div class="col-3 col-left padding">
 	          		<label for="cnpj">CNPJ</label>
-	          		<input type="text" name="cnpj" id="cnpj" required>
+	          		<input type="text" name="instituicao.cnpj" id="cnpj" required>
 	          	</div>
 
 	          	<div class="col-3 col-right padding-left">
 	          		<label for="telefone">Telefone</label>
-	          		<input type="tel" name="telefone" id="telefone" required>
+	          		<input type="tel" name="instituicao.telefone" id="telefone" required>
 	          	</div>
 	          </div>
 
 	          <div class="row margin-bottom">
 	          	<div class="col-4 col-left padding-right">
 	          		<label for="cidade">Cidade</label>
-	          		<input type="text" name="cidade" id="cidade" required>
+	          		<input type="text" name="instituicao.cidade" id="cidade" required>
 	          	</div>
 
 	          	<div class="col-6 col-left padding">
 	          		<label for="endereco">Endereço</label>
-	          		<input type="text" name="endereco" id="endereco" required>
+	          		<input type="text" name="instituicao.endereco" id="endereco" required>
 	          	</div>
 
 	          	<div class="col-2 col-right padding-left">
 	          		<label for="uf">Estado</label>
-	          		<select name="uf" id="uf" required>
+	          		<select name="instituicao.estado" id="uf" required>
 	          			<option value="MS">MS</option>
 	          			<option value="MT">MT</option>
 	          		</select>
@@ -72,7 +72,7 @@
 	          <div class="row margin-bottom">
 	          	<div class="col-4 col-left padding-right">
 	          		<label for="logomarca">Logomarca</label>
-	          		<input type="file" name="logomarca" id="logomarca">
+	          		<input type="file" name="instituicao.logomarca" id="logomarca">
 	          	</div>
 	          </div>
 

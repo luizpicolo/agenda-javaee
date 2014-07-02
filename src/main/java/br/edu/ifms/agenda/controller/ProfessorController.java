@@ -23,7 +23,12 @@ public class ProfessorController {
 	}
 
 	@Path("/professor")
-	public void professor() {
-		result.include("welcome", "Seja bem vindo, meu jovem!");
+	public void index() {
+		
+	}
+	
+	@Path("/professor/cadastrar")
+	public void cadastrar() {
+		
 	}
 }

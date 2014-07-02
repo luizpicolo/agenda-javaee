@@ -4,15 +4,15 @@
 <span id="header-nav" href="#"><i class="fa fa-bars"></i></span>
 
 <header id="header">
-  <h1 id="header-logo"><a href="./">Agenda</a></h1>
+  <h1 id="header-logo"><a href="/">Agenda</a></h1>
 
   <nav id="nav">
     <ul>
-      <li><a href="aluno">Aluno</a></li>
-      <li><a href="categoria">Categoria</a></li>
-      <li><a href="instituicao">Instituição</a></li>
-      <li><a href="professor">Professor</a></li>
-      <li><a href="tarefa">Tarefa</a></li>
+      <li><a href="/aluno">Aluno</a></li>
+      <li><a href="/categoria">Categoria</a></li>
+      <li><a href="/instituicao">Instituição</a></li>
+      <li><a href="/professor">Professor</a></li>
+      <li><a href="/tarefa">Tarefa</a></li>
     </ul>
   </nav>
 </header>
